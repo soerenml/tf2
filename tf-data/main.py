@@ -48,6 +48,7 @@ model = tf.keras.Sequential([
 log_dir="./tensorboard/"
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir,
                                                       histogram_freq=1)
+
 # Ignore the warnings: https://github.com/tensorflow/tensorflow/issues/31509
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
